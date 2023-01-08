@@ -90,6 +90,7 @@ body {
   color: var(--color);
   margin: 0;
   font-size: 0.6em;
+  text-shadow: 1px 1px #424242;
 }
 
 .footer p {
@@ -97,6 +98,7 @@ body {
   color: var(--color);
   margin: 0;
   font-size: 0.8em;
+  text-shadow: 1px 1px #424242;
 }
 
 .header-type {
