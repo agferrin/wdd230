@@ -8,6 +8,7 @@
   --primary-dark: rgb(185, 93, 0);
   --secondary-color: #5c83c4;
   --secondary-dark: #1a3b70;
+  --secondary-darker: #11224e;
   --background-color: #585858;
   --color: white;
   /* standard header/footer height */
@@ -86,18 +87,16 @@ body {
 
 .footer a {
   text-decoration: none;
-  color: var(--color);
+  color: var(--secondary-darker);
   margin: 0;
   font-size: 0.6em;
-  text-shadow: 1px 1px #424242;
 }
 
 .footer p {
   text-decoration: none;
-  color: var(--color);
+  color: var(--secondary-darker);
   margin: 0;
   font-size: 0.8em;
-  text-shadow: 1px 1px #424242;
 }
 
 .header-type {
