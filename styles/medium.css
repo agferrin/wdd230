@@ -1,0 +1,38 @@
+@media only screen and (min-width: 32.5em) {
+  
+  /*********************** COMMON ***********************/
+  /******************************************************/
+
+  body {
+    background-color: var(--background-test-color)
+  }
+
+  .content {
+    max-width: 1600px;
+  }
+
+  .header {
+    height: var(--header-landscape-height);
+  }
+
+  .header-container img {
+    width: 60px;
+    border-radius: 5px;
+  }
+
+  .footer {
+    height: var(--footer-landscape-hight);
+  }
+
+  /******************* PAGE SPECIFIC ********************/
+  /******************************************************/
+
+  main {
+  height:
+      calc(
+        100vh - 
+        var(--header-landscape-height) - 
+        var(--footer-landscape-height) - 20px)
+      ;
+  }
+}

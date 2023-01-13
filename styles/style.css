@@ -10,10 +10,13 @@
   --secondary-dark: #1a3b70;
   --secondary-darker: #11224e;
   --background-color: #585858;
+  --background-test-color: #353535;
   --color: white;
   /* standard header/footer height */
-  --header-hight: 120px;
-  --footer-hight: 80px;
+  --header-height: 120px;
+  --header-landscape-height: 80px;
+  --footer-height: 80px;
+  --footer-landscape-height: 60px;
 }
 
 /*********************** COMMON ***********************/
@@ -36,7 +39,7 @@ body {
 }
 
 .header {
-  height: var(--header-hight);
+  height: var(--header-height);
   margin: 10px 10px 0px 10px;
   background-image: url("../images/backgroundImage2.png");
   background-position: center;
@@ -61,8 +64,7 @@ body {
 
 .header-container img {
   width: 85px;
-  border-radius: 10px;
-
+  border-radius: 8px;
   /*
     taken from one of the examples 
     of getcssscan.com/css-box-shadow-examples
@@ -71,10 +73,11 @@ body {
     rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
     rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
     rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    transition: .4s;
 }
 
 .footer {
-  height: var(--footer-hight);
+  height: var(--footer-height);
   margin: 0px 10px 10px 10px;
   background-image: url("../images/backgroundImage3.png");
   background-position: center;
@@ -146,7 +149,11 @@ main {
 
   box-sizing: border-box;
   height:
-    calc(100vh - var(--header-hight) - var(--footer-hight) - 20px);
+    calc(
+      100vh - 
+      var(--header-height) - 
+      var(--footer-height) - 20px)
+    ;
   padding: 10px;
 }
 
