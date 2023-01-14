@@ -41,7 +41,7 @@ body {
 .header {
   height: var(--header-height);
   margin: 10px 10px 0px 10px;
-  background-image: url("../images/backgroundImage2.png");
+  background-image: url("../images/background-image-02.png");
   background-position: center;
   background-size: cover;
 }
@@ -79,7 +79,7 @@ body {
 .footer {
   height: var(--footer-height);
   margin: 0px 10px 10px 10px;
-  background-image: url("../images/backgroundImage3.png");
+  background-image: url("../images/background-image-03.png");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -135,7 +135,7 @@ body {
 /******************************************************/
 
 main {
-  background-image: url("../images/backgroundImage01.png");
+  background-image: url("../images/background-image-01.png");
   background-position: center;
   background-size: cover;
   margin: 0px 20px;
