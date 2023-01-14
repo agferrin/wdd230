@@ -13,9 +13,9 @@
   --background-test-color: #353535;
   --color: white;
   /* standard header/footer height */
-  --header-height: 120px;
+  --header-height: 90px;
   --header-landscape-height: 80px;
-  --footer-height: 80px;
+  --footer-height: 60px;
   --footer-landscape-height: 60px;
 }
 
@@ -41,7 +41,7 @@ body {
 .header {
   height: var(--header-height);
   margin: 10px 10px 0px 10px;
-  background-image: url("../images/backgroundImage2.png");
+  background-image: url("../../images/backgroundImage2.png");
   background-position: center;
   background-size: cover;
 }
@@ -63,7 +63,7 @@ body {
 }
 
 .header-container img {
-  width: 85px;
+  width: 75px;
   border-radius: 8px;
   /*
     taken from one of the examples 
@@ -73,13 +73,13 @@ body {
     rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
     rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
     rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-    transition: .4s;
+  transition: .4s;
 }
 
 .footer {
   height: var(--footer-height);
   margin: 0px 10px 10px 10px;
-  background-image: url("../images/backgroundImage3.png");
+  background-image: url("../../images/backgroundImage3.png");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -135,7 +135,7 @@ body {
 /******************************************************/
 
 main {
-  background-image: url("../images/backgroundImage01.png");
+  background-image: url("../../images/backgroundImage01.png");
   background-position: center;
   background-size: cover;
   margin: 0px 20px;
@@ -149,11 +149,7 @@ main {
 
   box-sizing: border-box;
   height:
-    calc(
-      100vh - 
-      var(--header-height) - 
-      var(--footer-height) - 20px)
-    ;
+    calc(100vh - var(--header-height) - var(--footer-height) - 20px);
   padding: 10px;
 }
 
@@ -167,42 +163,35 @@ main {
 }
 
 .main-content {
-  height: calc(100% - 62px);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: 1 auto;
+  height: calc(100% - 65px);
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  padding-bottom: 10px;
 }
 
-.button {
-  margin: 3px 0;
+.main-content h3 {
+  font-size: 18px;
+  margin: 20px 10px 10px 10px; 
+}
+
+.main-content h3 a {
   text-decoration: none;
-  text-align: center;
-  width: 100%;
-  padding: 12px 0;
-  color: var(--color);
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 6px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.9px);
-  -webkit-backdrop-filter: blur(3.9px);
-  border: 1px solid rgba(76, 76, 76, 0.48);
-  transition: .4s;
-}
-
-.button:hover {
-  border: 1px solid rgba(255, 255, 255, 0.48);
-  background: rgba(255, 255, 255, 0.5);
 }
 
 hr {
   margin: 5px 5px;
   border: 0;
   height: 1px;
-  background-image:
-    linear-gradient(to left, transparent, rgb(33, 55, 180),
-      transparent);
+  background-image: linear-gradient(
+    to left, 
+    transparent, rgb(33, 55, 180),
+    transparent)
+  ;
 }
 
 .main-footer p {
@@ -210,6 +199,32 @@ hr {
   font-size: 12px;
 }
 
-ul {
-  margin: 0;
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section img {
+  width: 95%;
+  border-radius: 7px;
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 95%;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 1);
+  color: #353535;
+  border-radius: 7px;
+  margin: 10px 0;
+}
+
+.divider p {
+  font-size: 0.8em;
+  margin: 0px 20px 25px 20px;
 }
