@@ -1,0 +1,18 @@
+@media only screen and (min-width: 36em) {
+  #menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #menu li:hover {
+    border-radius: 7px;
+    width: 110%;
+  }
+}
+
+@media only screen and (min-width: 30em) {
+  .header-container h1 {
+    font-size: 2em;
+  }
+
+}
